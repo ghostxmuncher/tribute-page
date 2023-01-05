@@ -24,18 +24,28 @@ body {
     font-size: 4rem;
     margin-top: 25px;
     margin-bottom: 20px;
+    position: relative ;
+    z-index: 3;
 }
 
+.subtitle {
+    position: relative;
+    z-index: 3;
+}
 #img-div {
     margin: 1rem;
     background: rgb(255, 252, 215);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15px;
 }
 
 #image {
+    display: block;
     margin: 15px auto;
+    height: auto;
+    max-width: 100%;
 }
 
 #img-caption {
@@ -48,12 +58,74 @@ body {
     margin: 20px auto 50px auto;
 }
 
-ul {
+ul, .quote {
     margin: 0 auto 50px auto;
     max-width: 550px;
     text-align: left;
+    line-height: 1.6rem;
 }
 
 li {
     margin: 25px 0;
+}
+
+#link {
+    text-align: center;
+}
+
+.heart {
+    position: absolute;
+    margin: 100px auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9b3b3;
+    height: 175px;
+    width: 175px;
+    transform: rotate(-45deg);
+    animation-name: color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+
+@keyframes color {
+    0% {
+        background-color: #fcd9d9;
+    }
+    50% {
+        background-color: #f9b3b3;
+    }
+    100% {
+        background-color: #fcd9d9;
+    }
+}   
+
+.heart::after {
+    background-color: #f9b3b3;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    height: 175px;
+    width: 175px;
+    top: 0px;
+    left: 87.5px;
+    animation-name: color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.heart::before {
+    background-color: #f9b3b3;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    height: 175px;
+    width: 175px;
+    top: -87.5px;
+    left: 0px;
+    animation-name: color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 }
