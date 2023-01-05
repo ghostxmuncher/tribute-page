@@ -25,3 +25,35 @@ body {
     margin-top: 25px;
     margin-bottom: 20px;
 }
+
+#img-div {
+    margin: 1rem;
+    background: rgb(255, 252, 215);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#image {
+    margin: 15px auto;
+}
+
+#img-caption {
+    text-align: center;
+    margin: 5px 10px 10px 10px;
+}
+
+#list-header {
+    text-align: center;
+    margin: 20px auto 50px auto;
+}
+
+ul {
+    margin: 0 auto 50px auto;
+    max-width: 550px;
+    text-align: left;
+}
+
+li {
+    margin: 25px 0;
+}
